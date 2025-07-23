@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Righteous&display=swap');
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(-45deg, rgb(84, 22, 255), rgb(90, 22, 250), rgb(102, 39, 250), rgb(97, 32, 247));
+    background-size: 400% 400%;
+    animation: redGradient 12s ease infinite;
+    padding-top: 130px;
+  }
+  
+  @keyframes redGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  header{
+    position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px; /* set this to your exact navbar height */
+   border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* or aqua, or #ccc, etc. */
+   background: transparent;
+   backdrop-filter: blur(10px); /* Optional for frosted glass effect */
+   -webkit-backdrop-filter: blur(10px); /* Optional for frosted glass effect */
+   border-color: aqua;
+   width: 100vw; /* Full viewport width */
+   position: fixed;
+   z-index: 1000;
+   font-family: 'righteous', sans-serif;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+
+  h1.logo{
+    color: rgb(0, 18, 153);
+    padding-left: 40px;
+  }
+  span.green{
+    color: aqua;
+    text-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 30px aqua, 0 0 40px rgb(34, 252, 252);
+  }
+  ul.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+    padding-right: 50px;
+  }
+  ul.nav-links li a{
+    color: rgb(0, 18, 153);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  ul.nav-links li a:hover{
+    text-shadow: 0 0 5px aqua, 0 0 10px cyan;
+    transition: 0.5s ease;
+  }
+.typewriter-container {
+  margin-top: 120px; /* Adjust if navbar is fixed */
+  text-align: center;
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid aqua;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  animation: typing 4s steps(40, end), blink 0.75s step-end 5;
+  color: aqua;
+  font-family: 'righteous', sans-serif;
+  font-size: 1.5rem;
+    padding-top: 0px; /* Adjust based on your nav height */
+  text-align: center;
+  position: relative;
+  z-index: 1; /* Or 10 just to be safe */
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+.image-wrapper{
+  text-align: center;
+  display: flex;
+  gap: 160px;
+}
+.image-wrapper img{
+  max-width: 190px;
+  max-height: max-content;
+  border-radius: 20px;
+  margin-left: 90px;
+  border-style: solid;
+  border-color: aqua;
+  border-width: 10px;
+}
+.description{
+  color:aqua;
+  font-family: 'righteous', sans-serif;
+  margin-left: 10px;
+}
+.image-block{
+  opacity: 0;
+  transform: translateY(40px);  /* Start from below */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When visible on scroll */
+.image-block.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+section.intro {
+  padding: 40px 20px; /* add real padding instead of margin hacks */
+  outline-style: outset;
+  outline-offset: 10px; /* reduce the visual size of outline */
+  outline-color: aqua;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+} 
+
+h1.intro-title {
+  margin-top: 0; /* ⬅️ remove the 180px */
+  margin-left: 0;
+  font-size: 2.5rem;
+  flex: 1;
+  width: 70%;
+  color: rgb(34, 252, 252);
+  font-family: 'Righteous', sans-serif;
+
+}
+
+p.intro {
+  margin-top: 10px;
+  color: rgb(34, 252, 252);
+  font-family: 'Righteous', sans-serif;
+  font-size: 1.4rem;
+}
+
+.cool-room{
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+}
+
+.intro-row {
+  text-align: right;
+  
+}
+.info-show{
+  background: linear-gradient(to right, rgb(36, 83, 251),  rgb(0, 18, 153));
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 2px solid aqua;
+  box-shadow: 0 4px 20px rgba(0, 242, 255, 0.2);
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  min-height: 350px;
+  margin-top: 90px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.info-text{
+  color: aqua;
+  font-family: 'Righteous', sans-serif;
+  height: 30%;
+  flex: 1;
+}
+.center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Full viewport height */
+  padding-top: 80px; /* if you have a fixed navbar */
+}
+.info-show:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(0, 242, 255, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(to right, rgb(36, 83, 251), rgb(0, 18, 153), rgba(0, 18, 153, 0.8));
+}
+.show-video{
+  flex: 1;
+  max-width: 200px;
+  width: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+section.info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+}
