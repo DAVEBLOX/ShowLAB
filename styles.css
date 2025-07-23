@@ -78,6 +78,7 @@ body {
   text-align: center;
   position: relative;
   z-index: 1; /* Or 10 just to be safe */
+  text-decoration-line: underline;
 }
 
 @keyframes typing {
