@@ -21,8 +21,8 @@ body {
   height: 80px; /* set this to your exact navbar height */
    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* or aqua, or #ccc, etc. */
    background: transparent;
-   backdrop-filter: blur(10px); /* Optional for frosted glass effect */
    -webkit-backdrop-filter: blur(10px); /* Optional for frosted glass effect */
+      backdrop-filter: blur(10px); /* Optional for frosted glass effect */
    border-color: aqua;
    width: 100vw; /* Full viewport width */
    position: fixed;
@@ -160,8 +160,8 @@ p.intro {
 .info-show{
   background: linear-gradient(to right, rgb(36, 83, 251),  rgb(0, 18, 153));
   border-radius: 15px;
-  backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
   border: 2px solid aqua;
   box-shadow: 0 4px 20px rgba(0, 242, 255, 0.2);
   padding: 20px;
@@ -201,6 +201,7 @@ p.intro {
   min-height: 280px;
   object-fit: cover;
   border-radius: 15px;
+  border: 3px solid rgb(2, 255, 2);
 }
 section.info{
   display: flex;
