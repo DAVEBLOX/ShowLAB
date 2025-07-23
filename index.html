@@ -44,7 +44,7 @@
 </div>
 </div>
 <div class="center-container">
-  <div class="info-show">
+  <div class="info-show card-hidden">
     <section class="info">
       <div class="info-text">
         <h2 class="show-title">Show us your playing style</h2>
@@ -76,6 +76,19 @@
 
   window.addEventListener('scroll', revealOnScroll);
   window.addEventListener('load', revealOnScroll);
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('card-visible');
+        entry.target.classList.remove('card-hidden');
+        observer.unobserve(entry.target); // remove this line if you want repeat on scroll
+      }
+    });
+  });
+
+  const cards = document.querySelectorAll('.info-show');
+  cards.forEach(card => observer.observe(card));
+
 </script>
 
 </body>
