@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 body {
     margin: 0;
     height: 100vh;
@@ -159,27 +160,30 @@ p.intro {
 }
 .info-show{
   background: linear-gradient(to right, rgb(36, 83, 251),  rgb(0, 18, 153));
-  border-radius: 15px;
+  border-radius: 95px;
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
   border: 2px solid aqua;
   box-shadow: 0 4px 20px rgba(0, 242, 255, 0.2);
   padding: 20px;
   width: 90%;
-  max-width: 800px;
-  min-height: 350px;
+  max-width: 900px;
+  min-height: 550px;
   margin-top: 90px;
   display: flex;
   align-items: center;
   gap: 30px;
   flex-wrap: wrap;
   justify-content: space-between;
+  position: relative;
+  overflow: hidden;
 }
 .info-text{
   color: aqua;
   font-family: 'Righteous', sans-serif;
   height: 30%;
   flex: 1;
+  font-size: 1.3rem;
 }
 .center-container {
   display: flex;
@@ -200,7 +204,7 @@ p.intro {
   width: 100%;
   min-height: 280px;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 25px;
   border: 3px solid rgb(2, 255, 2);
 }
 section.info{
@@ -211,6 +215,8 @@ section.info{
   flex-wrap: wrap;
   gap: 30px;
   width: 100%;
+  position: relative;
+  padding-top: 130px;
 }
 
 .card-hidden {
@@ -223,4 +229,90 @@ section.info{
   opacity: 1;
   transform: translateY(0); /* Move into place */
 }
+.shadow{
+  text-shadow: 0 0 5px lime, 0 0 10px lightgreen;
+}
+.contact{
+  padding: 15px 20px;
+  background: linear-gradient(to right, rgb(3, 48, 213), rgb(0, 18, 153));
+  border: none;
+  width: 10%;
+  color: wheat;
+  border-radius: 60px;
+  font-family: 'Righteous', sans-serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+.contact:hover{
+  background: linear-gradient(to right, rgb(0, 252, 240), rgb(0, 30, 255), rgba(0, 18, 153, 0.8));
+  box-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  border: 0.5px solid aqua;
+  transform: scale(1.05);
+  color: white;
+}
+.creates{
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+.creator-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 20px;
+}
+.info-texts{
+  color: aqua;
+  font-size: 1.2rem;
+  font-family: 'Righteous', sans-serif;
+  text-align: center;
+}
+.infos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.tooltip-content {
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
 
+.tooltip-container:hover .tooltip-content {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0px);
+}
+.tooltip-target {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #121212;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
