@@ -1,0 +1,754 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(-45deg, rgb(84, 22, 255), rgb(90, 22, 250), rgb(102, 39, 250), rgb(97, 32, 247));
+    background-size: 400% 400%;
+    animation: redGradient 12s ease infinite;
+    padding-top: 130px;
+  }
+  
+  @keyframes redGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  header{
+    position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px; /* set this to your exact navbar height */
+   border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* or aqua, or #ccc, etc. */
+   background: transparent;
+   -webkit-backdrop-filter: blur(10px); /* Optional for frosted glass effect */
+      backdrop-filter: blur(10px); /* Optional for frosted glass effect */
+   border-color: aqua;
+   width: 100vw; /* Full viewport width */
+   position: fixed;
+   z-index: 1000;
+   font-family: 'righteous', sans-serif;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+
+  h1.logo{
+    color: rgb(0, 18, 153);
+    padding-left: 40px;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    pointer-events: none;
+  }
+  span.green{
+    color: aqua;
+    text-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 30px aqua, 0 0 40px rgb(34, 252, 252);
+  }
+  ul.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+    padding-right: 50px;
+  }
+  ul.nav-links li a{
+    color: rgb(0, 18, 153);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  ul.nav-links li a:hover{
+    text-shadow: 0 0 5px aqua, 0 0 10px cyan;
+    transition: 0.5s ease;
+  }
+.typewriter-container {
+  margin-top: 120px; /* Adjust if navbar is fixed */
+  text-align: center;
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid aqua;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  animation: typing 4s steps(40, end), blink 0.75s step-end 5;
+  color: aqua;
+  font-family: 'righteous', sans-serif;
+  font-size: 1.5rem;
+    padding-top: 0px; /* Adjust based on your nav height */
+  text-align: center;
+  position: relative;
+  z-index: 1; /* Or 10 just to be safe */
+  text-decoration-line: underline;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+.image-wrapper{
+  text-align: center;
+  display: flex;
+  gap: 160px;
+}
+.image-wrapper img{
+  max-width: 190px;
+  max-height: max-content;
+  border-radius: 20px;
+  margin-left: 90px;
+  border-style: solid;
+  border-color: aqua;
+  border-width: 10px;
+}
+a{
+  text-decoration: none;
+}
+
+.description{
+  color:aqua;
+  font-family: 'righteous', sans-serif;
+  margin-left: 10px;
+}
+.image-block{
+  opacity: 0;
+  transform: translateY(40px);  /* Start from below */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When visible on scroll */
+.image-block.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+section.intro {
+  padding: 40px 20px; /* add real padding instead of margin hacks */
+  outline-style: outset;
+  outline-offset: 10px; /* reduce the visual size of outline */
+  outline-color: aqua;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+} 
+
+h1.intro-title {
+  margin-top: 0; /* ⬅️ remove the 180px */
+  margin-left: 0;
+  font-size: 2.5rem;
+  flex: 1;
+  width: 70%;
+  color: rgb(34, 252, 252);
+  font-family: 'Righteous', sans-serif;
+
+}
+
+p.intro {
+  margin-top: 10px;
+  color: rgb(34, 252, 252);
+  font-family: 'Righteous', sans-serif;
+  font-size: 1.4rem;
+}
+
+.cool-room{
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+    background: linear-gradient(#0b001c, #0b001c) padding-box,
+  linear-gradient(135deg, #00f2ff, #ff0095) border-box;
+  border: 4px solid transparent;
+}
+
+.intro-row {
+  text-align: right;
+  
+}
+.info-show{
+  background: linear-gradient(to right, rgb(36, 83, 251),  rgb(0, 18, 153));
+  border-radius: 95px;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  border: 2px solid aqua;
+  box-shadow: 0 4px 20px rgba(0, 242, 255, 0.2);
+  padding: 20px;
+  width: 90%;
+  max-width: 900px;
+  min-height: 550px;
+  margin-top: 90px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.info-text{
+  color: aqua;
+  font-family: 'Righteous', sans-serif;
+  height: 30%;
+  flex: 1;
+  font-size: 1.3rem;
+}
+.center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Full viewport height */
+  padding-top: 80px; /* if you have a fixed navbar */
+}
+.show-video{
+  flex: 1;
+  max-width: 200px;
+  width: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  border-radius: 25px;
+  border: 3px solid rgb(2, 255, 2);
+}
+section.info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  position: relative;
+  padding-top: 130px;
+}
+
+.card-hidden {
+  opacity: 0;
+  transform: translateY(50px); /* Start 50px lower */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card-visible {
+  opacity: 1;
+  transform: translateY(0); /* Move into place */
+}
+.shadow{
+  text-shadow: 0 0 5px lime, 0 0 10px lightgreen;
+}
+.contact{
+  padding: 15px 20px;
+  background: linear-gradient(to right, rgb(3, 48, 213), rgb(0, 18, 153));
+  border: none;
+  width: 10%;
+  color: wheat;
+  border-radius: 60px;
+  font-family: 'Righteous', sans-serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.contact:hover{
+  background: linear-gradient(to right, rgb(0, 252, 240), rgb(0, 30, 255), rgba(0, 18, 153, 0.8));
+  box-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+  transform: scale(1.05);
+  color: white;
+}
+.creates{
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(#0b001c, #0b001c) padding-box,
+  linear-gradient(135deg, #00f2ff, #0400ff) border-box;
+  border: 4px solid transparent;
+}
+.creator-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 20px;
+}
+.info-texts{
+  color: aqua;
+  font-size: 1.2rem;
+  font-family: 'Righteous', sans-serif;
+  text-align: center;
+}
+.infos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: rgba(0, 18, 153, 0.9);
+  color: aqua;
+  font-family: 'Righteous', sans-serif;
+  font-size: 0.85rem;
+  padding: 8px 12px;
+  border-radius: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 242, 255, 0.3);
+  z-index: 10;
+}
+
+.tooltip:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0px);
+}
+
+.gallery-title {
+  text-align: center;
+  color: aqua;
+  font-family: 'Righteous', sans-serif;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  border-bottom: 1px solid aqua;
+}
+.gallery-container{
+  margin-top: 180px;
+}
+.gallery-item{
+  height: 300px;
+  width: 300px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.items{
+  padding: 20px 15px;
+  font-family: "Righteous", sans-serif;
+  color: aqua;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.item-button{
+  background-color: #0400ff;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: "Righteous", sans-serif;
+  font-size: 1rem;
+}
+.item-button:hover{
+  background-color: #00f2ff;
+  box-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.item1{
+  background-color: #2b27fe;
+  width: 100%;
+  max-width: 300px;
+  min-height: 300px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  border: 1px solid aqua;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.item1:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+}
+.item-info{
+  padding: 20px;
+}
+.item-disc{
+  text-decoration: red line-through;
+  color: rgb(0, 208, 227);
+}
+.cta-img {
+  position: relative;
+  background-image: url('assets/cta-img.png'); /* replace with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 70vh; /* adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 100px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6); /* darkness level */
+  z-index: 1;
+}
+
+.CTA {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.CTA-title {
+  font-size: 2rem;
+  font-family: 'Righteous', sans-serif;
+  margin-bottom: 10px;
+  color: aqua;
+}
+
+.CTA-desc {
+  font-size: 1.2rem;
+  font-family: 'Righteous', sans-serif;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, aqua, rgb(2, 255, 2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* hides the actual text color */
+
+}
+.email {
+  padding: 40px;
+  text-align: center;
+  margin-top: 50px;
+}
+.email-title {
+  font-size: 1.5rem;
+  font-family: 'Righteous', sans-serif;
+  margin-bottom: 10px;
+  color: aqua;
+}
+.email-desc {
+  font-size: 1.2rem;
+  font-family: 'Righteous', sans-serif;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, aqua, rgb(2, 255, 2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* hides the actual text color */
+
+}
+.email-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.email-input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  width: 300px;
+}
+.email-input:hover:focus {
+  border: 1px solid aqua;
+  box-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+}
+.email-button {
+  background-color: #0400ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Righteous", sans-serif;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.email-button:hover {
+  background-color: #00f2ff;
+  box-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+}
+footer {
+  background-color: rgba(0, 18, 153, 0.9);
+  color: aqua;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Righteous', sans-serif;
+  position: relative;
+}
+.social-icons {
+  gap: 30px;
+  color: aqua;
+}
+.social-icons a {
+  color: aqua;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+.nav-link{
+  text-align: center;
+  position: relative;
+  color: aqua;
+  list-style: none;
+}
+.social-icons a:hover{
+  text-decoration: underline aqua;
+}
+
+.subscribe-container {
+  background: linear-gradient(to right, rgb(36, 83, 251),  rgb(0, 18, 153));
+  border-radius: 95px;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  border: 2px solid aqua;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 12px auto 12px auto;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 15px rgba(247, 247, 247, 0.5);
+}
+
+.subscribe-container h2 {
+  margin-bottom: 10px;
+}
+
+input[type="email"] {
+  width: 80%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1.5px solid rgb(224, 253, 255);
+  outline: none;
+  margin-bottom: 15px;
+  transition: border 0.3s ease;
+}
+input[type="email"]:hover{
+  border: 1.5px solid aqua;
+}
+input[type="email"]:focus{
+  border: 1.5px solid aqua;
+}
+
+input[type="submit"] {
+  background: linear-gradient(45deg, #09d9fe, #0320fa);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: linear-gradient(45deg, #0320fa, #09d9fe);
+  transition: background-color 0.3s ease;
+}
+
+/* 📱 Mobile First Responsiveness */
+@media screen and (max-width: 1024px) {
+  /* Navbar */
+  ul.nav-links {
+    gap: 10px;
+    padding-right: 20px;
+  }
+  ul.nav-links li a {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  h1.logo {
+    padding-left: 0;
+    font-size: 1.5rem;
+  }
+
+  ul.nav-links {
+    flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    gap: 10px;
+  }
+
+  .typewriter {
+    font-size: 1.2rem;
+  }
+
+  .image-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 0;
+  }
+
+  .image-wrapper img {
+    margin-left: 0;
+    max-width: 140px;
+  }
+
+  .info-show {
+    flex-direction: column;
+    padding: 15px;
+    min-height: auto;
+    border-radius: 30px;
+  }
+
+  .info-text {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .show-video {
+    max-width: 100%;
+    width: 100%;
+    min-height: 200px;
+  }
+
+  .creates {
+    height: 100px;
+    width: 100px;
+  }
+
+  .gallery-item {
+    width: 90%;
+    height: auto;
+  }
+
+  .items {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact {
+    width: 50%;
+  }
+
+  .CTA-title {
+    font-size: 1.5rem;
+  }
+
+  .CTA-desc {
+    font-size: 1rem;
+  }
+
+  .email-input {
+    width: 80%;
+  }
+
+  .email-button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .typewriter {
+    font-size: 1rem;
+  }
+
+  h1.intro-title {
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  p.intro {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .info-texts {
+    font-size: 1rem;
+  }
+
+  .contact {
+    width: 80%;
+  }
+
+  .CTA-title {
+    font-size: 1.2rem;
+  }
+
+  .CTA-desc {
+    font-size: 0.9rem;
+  }
+
+  .gallery-title {
+    font-size: 1.5rem;
+  }
+}
+/* Hamburger styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  padding: 10px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: aqua;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Hide nav-links on mobile */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background:transparent;
+    flex-direction: column;
+    width: 200px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    border-radius: 0 0 0 15px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-links.open {
+    height: auto;
+    padding: 15px 0;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+}

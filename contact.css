@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(-45deg, rgb(84, 22, 255), rgb(90, 22, 250), rgb(102, 39, 250), rgb(97, 32, 247));
+  background-size: 400% 400%;
+  animation: redGradient 12s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Righteous', sans-serif;
+  min-height: 100vh;
+}
+
+@keyframes redGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Navbar same as yours */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+   -webkit-backdrop-filter:blur(10px);
+  backdrop-filter: blur(10px);
+  border-color: aqua;
+  width: 100vw;
+  z-index: 1000;
+  font-family: 'Righteous', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1.logo {
+  color: rgb(0, 18, 153);
+  padding-left: 40px;
+  text-decoration: none;
+}
+span.green {
+  color: aqua;
+  text-shadow: 0 0 10px aqua, 0 0 20px aqua;
+}
+
+ul.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding-right: 50px;
+}
+ul.nav-links li a {
+  color: rgb(0, 18, 153);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+ul.nav-links li a:hover {
+  text-shadow: 0 0 5px aqua, 0 0 10px cyan;
+}
+
+/* 🌟 Glass card container */
+.frm {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1050px;
+  min-height: 600px;
+  border-radius: 25px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter:blur(15px);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 30px rgba(0, 242, 255, 0.2);
+  gap: 30px;
+}
+
+/* Form styling */
+.forms {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  color: aqua;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.info {
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  width: 100%;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: 0.3s;
+}
+.info:hover, .info:focus {
+  border: 1px solid aqua;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.sbt-btn {
+  color: rgb(0, 18, 153);
+  background: aqua;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.sbt-btn:hover {
+  background: rgb(0, 18, 153);
+  color: aqua;
+  transform: scale(1.05);
+}
+
+#ast {
+  color: red;
+}
+
+/* Right side video */
+.frm-vid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.msg-vid {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 242, 255, 0.3);
+}
+
+.hash {
+  margin-top: 15px;
+  color: aqua;
+  font-size: 1.1rem;
+  text-shadow: 0 0 5px cyan;
+}

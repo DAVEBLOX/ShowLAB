@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | ShowLab</title>
+    <link rel="icon" href="assets/Frame 1.png" type="image/png">
+    <link rel="stylesheet" href="contact.css"> 
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+        <header>
+         <a href="index.html"> <h1 class="logo">Show<span class="green">LAB</span></h1></a>   
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#creators">Creators</a></li>
+                <li><a href="#store">Store</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="frm">
+    <form class="forms" action="https://formspree.io/f/xkgzdagn" method="post">
+        <label for="Name">Name: <span id="ast">*</span></label><br>
+        <input type="text" id="Name" class="info" placeholder="John Doe" required />
+        <br><br>
+        <label for="Email">Email: <span id="ast">*</span></label><br>
+        <input type="email" id="Email" class="info" placeholder="youremail@example.com" type="email" name="email" required />
+        <br><br>
+        <label for="message">Message: <span id="ast">*</span></label><br>
+        <textarea id="message" class="info" placeholder="I need the futuristic neon plus or whatever....." name="message" required></textarea>
+        <br>
+        <br>
+        <input type="submit" class="sbt-btn">
+     </form>
+     <div class="frm-vid">
+     <video class="msg-vid" autoplay loop muted>
+        <source src="assets/show.mp4" type="video/mp4">
+     </video>
+     <p class="hash">#fromamelia</p>
+     </div>
+    </div>
+    
+</body>
+</html>
